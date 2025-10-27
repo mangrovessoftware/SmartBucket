@@ -8,13 +8,27 @@
 import SwiftUI
 
 struct SplashScreen: View {
+    @State private var showSupermarketScreen = false
+    
     var body: some View {
-        ZStack {
-            BackgroundView()
+        NavigationStack {
+            ZStack {
+                BackgroundView()
+                
+                NavigationLink(destination: SupermarketSelectionScreen(), isActive: $showSupermarketScreen) {
+                    EmptyView()
+                }
+            }
+            .onAppear {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                    withAnimation {
+                        showSupermarketScreen = true
+                    }
+                }
+            }
         }
     }
 }
-
 
 #Preview {
     SplashScreen()
