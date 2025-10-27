@@ -1,14 +1,13 @@
 //
-//  LaunchScreen.swift
+//  SplashScreen.swift
 //  SmartBucket
 //
-//  Created by Muthu on 25/10/25.
+//  Created by Muthu on 27/10/25.
 //
 
 import SwiftUI
 
-struct LaunchScreen: View {
-    
+struct SplashScreen: View {
     var body: some View {
         ZStack {
             BackgroundView()
@@ -18,5 +17,5 @@ struct LaunchScreen: View {
 
 
 #Preview {
-    LaunchScreen()
+    SplashScreen()
 }
