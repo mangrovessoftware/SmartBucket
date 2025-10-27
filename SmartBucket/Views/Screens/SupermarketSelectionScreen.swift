@@ -9,7 +9,28 @@ import SwiftUI
 
 struct SupermarketSelectionScreen: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            titleSection
+        }
+        .navigationBarBackButtonHidden()
+    }
+}
+
+extension SupermarketSelectionScreen {
+    var titleSection: some View {
+        HStack(spacing: 8) {
+            Text("Pick Your Store")
+                .font(.title3)
+                .foregroundColor(.primary)
+                .bold()
+            
+            Image(AppImage.superMarketIcon.rawValue)
+                .resizable()
+                .scaledToFit()
+                .frame(width: 24, height: 24)
+            
+            Spacer()
+        }
     }
 }
 
