@@ -11,8 +11,14 @@ struct LaunchScreen: View {
     
     var body: some View {
         ZStack {
-            Color.gradient15
+            Color.backGroundGradient
                 .ignoresSafeArea()
+            
+            Image(AppImage.backGroundIcons.rawValue)
+                .scaledToFill()
+                .ignoresSafeArea()
+                .opacity(0.2)
+                .rotationEffect(.degrees(65))
             
             logoSection
         }

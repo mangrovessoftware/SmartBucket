@@ -9,4 +9,5 @@ import Foundation
 
 enum AppImage: String {
     case appLogo = "AppLogo"
+    case backGroundIcons = "BackGroundIcons"
 }
